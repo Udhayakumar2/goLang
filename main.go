@@ -1,34 +1,10 @@
 package main
-
+ // If the package name are same, They can share all the function, variables, etc with in that package.
+ 
 import (
 	"fmt"
-	"math"
 )
-// function with one param, no return value
-func sayGreeting(name string) {
-	fmt.Printf("Good Morning %v \n", name)
-}
-
-// function with one param, no return value
-func sayBye(name string)  {
-	fmt.Printf("Good Bye %v \n", name)
-}
-
-// function with one param, one return value
-func circleArea(radius float32) float32 {
-	area := math.Pi * radius *radius
-	return area
-}
-
-// function with two params string and function, no return value
-func cycleName(listOfName []string, callBack func(string)) {
-	for  _, value := range listOfName { // _ will avoid the index value.
-		callBack(value)
-	}
-}
-
 func main() {
-	names :=[]string{"Abi", "Daniel", "Abishek"}
 	sayGreeting("Daniel")
 	sayGreeting("Abi")
 	sayBye("Daniel")
